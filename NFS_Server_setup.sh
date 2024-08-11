@@ -27,3 +27,8 @@ systemctl start nfs
 
 # 重新挂载一次
 exportfs -arv
+
+# 3.关闭防火墙
+systemctl stop firewalld.service
+systemctl disable firewalld.service
+sed -i 's/SELINUX=enforcing/SELINUX=disable/g' /etc/selinux/config
