@@ -40,5 +40,5 @@ systemctl start autofs
 systemctl enable autofs
 
 # 3.5  修改自动卸载时间
-sed -i 's/#OPTIONS=""/OPTIONS="--timeout=43200/g' /etc/sysconfig/autofs
+sed -i 's/#OPTIONS=""/OPTIONS="--timeout=43200/g"' /etc/sysconfig/autofs
 systemctl restart autofs
