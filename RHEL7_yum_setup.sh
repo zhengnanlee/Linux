@@ -1,8 +1,8 @@
 #!/bin/bash
 # 本地ISO yum 源
-if [ !-d "/media/cdrom" ]
+if [ ! -d "/media/cdrom" ]
 then
-	mkdir -p media/cdrom
+	mkdir -p /media/cdrom
 fi
 
 mount /dev/sr0 /media/cdrom
