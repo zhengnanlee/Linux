@@ -1,0 +1,11 @@
+mkdir yum_temp && cd yum_temp
+ 
+wget https://mirrors.aliyun.com/centos/7/os/x86_64/Packages/python-iniparse-0.4-9.el7.noarch.rpm --no-check-certificate
+wget https://mirrors.aliyun.com/centos/7/os/x86_64/Packages/yum-3.4.3-168.el7.centos.noarch.rpm --no-check-certificate
+wget https://mirrors.aliyun.com/centos/7/os/x86_64/Packages/yum-metadata-parser-1.1.4-10.el7.x86_64.rpm --no-check-certificate
+ 
+wget https://mirrors.aliyun.com/centos/7/os/x86_64/Packages/yum-plugin-fastestmirror-1.1.31-54.el7_8.noarch.rpm  --no-check-certificate
+ 
+rpm -ivh *.rpm --force --nodeps
+ 
+cd .. && rm -rf yum_temp
