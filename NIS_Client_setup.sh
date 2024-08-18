@@ -12,9 +12,9 @@ nisdomainname $nisdomain	        # 临时生效命令
 echo "/bin/nisdomainname $nisdomain" >> /etc/rc.d/rc.local
 
 # 设定主机名与 IP 的对应
-echo -e "10.10.10.5\tCentos7-Server" >> /etc/hosts
-echo -e "10.10.10.6\tCentos7-Client1" >> /etc/hosts
-echo -e "10.10.10.7\tCentos7-Client2" >> /etc/hosts
+echo -e "10.10.10.5\tRHEL7-Server" >> /etc/hosts
+echo -e "10.10.10.6\tRHEL7-Client1" >> /etc/hosts
+echo -e "10.10.10.7\tRHEL7-Client2" >> /etc/hosts
 
 # 用图形界面配置NIS
 authconfig-tui

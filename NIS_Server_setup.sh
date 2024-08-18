@@ -19,9 +19,9 @@ echo "$ip/255.255.255.0   : *       : *                : none" >> /etc/ypserv.co
 echo "*                          : *       : *                : deny" >>/etc/ypserv.conf
 
 # 设定主机名与 IP 的对应 (/etc/hosts, Server端和Client端都需修改,改进：登录局域网下所有主机，执行命令将IP和主机名输入到共享文件中，此处直接cp或cat 进/etc/hosts)
-echo -e "10.10.10.5\tCentos7-Server" >> /etc/hosts
-echo -e "10.10.10.6\tCentos7-Client1" >> /etc/hosts
-echo -e "10.10.10.7\tCentos7-Client2" >> /etc/hosts
+echo -e "10.10.10.5\tRHEL7-Server" >> /etc/hosts
+echo -e "10.10.10.6\tRHEL7-Client1" >> /etc/hosts
+echo -e "10.10.10.7\tRHEL7-Client2" >> /etc/hosts
 
 # 处理账号并建立数据库
 groupadd -g 500 SGE
