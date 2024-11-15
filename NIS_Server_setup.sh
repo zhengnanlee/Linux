@@ -5,7 +5,7 @@ ip='10.10.10.0'
 # 安装软件
 yum -y install ypserv ypbind yp-tools
 # 设定 NIS 的域名和固定端口
-echo -e "NISDOMAIN=$nisdomain\nYPSERV_ARGS="-p 1011"" >> /etc/sysconfig/network
+echo -e "NISDOMAIN=$nisdomain\nYPSERV_ARGS=\"-p 1011\"" >> /etc/sysconfig/network
 nisdomainname lizhengnan		# 临时效命令
 # 设置 yppasswdd 启动在固定的端口
 sed -i 's/YPPASSWDD_ARGS=/YPPASSWDD_ARGS="--port  1012"/g' /etc/sysconfig/yppasswdd
