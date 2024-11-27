@@ -1,6 +1,7 @@
 #!/bin/bash
 
 yum install -y vim zip unzip lrzsz epel-release
+yum install net-tools
 
 # 设置时区
 #timedatectl set-timezone Asia/Shanghai

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 1.创建共享目录
-share_dirs="/home/nishome   /NFS/SGE   /NFS/Data  /NFS/Software"
+share_dirs="/home/nishome   /NFS/SGE   /NFS/Data  /NFS/Software /NFS/Pipeline"
 for dir in $share_dirs
 do
 	if [ ! -d "$dir"  ]

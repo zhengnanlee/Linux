@@ -9,17 +9,17 @@ fi
 mount /dev/sr0 /media/cdrom
 echo "/dev/sr0                        /media/cdrom              iso9660  defaults        0 0"  >> /etc/fstab
 
-echo "[rhel7.9-yum]" > /etc/yum.repos.d/rhel7.9.repo
-echo "name=rhel7.9-cd-package" >> /etc/yum.repos.d/rhel7.9.repo
-echo "baseurl=file:///media/cdrom/" >> /etc/yum.repos.d/rhel7.9.repo
-echo -e "enable=1\ngpgcheck=0" >> /etc/yum.repos.d/rhel7.9.repo
+echo "[rhel7.7-yum]" > /etc/yum.repos.d/rhel7.7.repo
+echo "name=rhel7.7-cd-package" >> /etc/yum.repos.d/rhel7.7.repo
+echo "baseurl=file:///media/cdrom/" >> /etc/yum.repos.d/rhel7.7.repo
+echo -e "enable=1\ngpgcheck=0" >> /etc/yum.repos.d/rhel7.7.repo
 
 yum clean all
 yum makecache
 
 # 安装wget
 #yum install wget
-rpm -ivh /media/cdrom/Packages/wget-1.14-18.el7_6.1.x86_64.rpm
+rpm -ivh /media/cdrom/Packages/wget*.rpm
 
 # 清除旧 yum 版本
 rpm -qa|grep yum|xargs rpm -e --nodeps

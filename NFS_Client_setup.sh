@@ -1,6 +1,6 @@
 #!/bin/bash
 NFS_Server_IP=10.10.10.5
-share_dirs="/home/nishome   /NFS/SGE   /NFS/Data  /NFS/Software"
+share_dirs="/home/nishome   /NFS/SGE   /NFS/Data  /NFS/Software /NFS/Pipeline"
 
 # 1.1安装软件
 yum install -y nfs-utils rpcbind
